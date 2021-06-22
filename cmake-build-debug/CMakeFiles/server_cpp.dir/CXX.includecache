@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/Cgi.hpp
+iostream
+-
+iostream
+-
+map
+-
+unistd.h
+-
+
+/Users/patutina/Desktop/Школа 21/new_boris_server/src/Cgi.cpp
+Cgi.hpp
+/Users/patutina/Desktop/Школа 21/new_boris_server/src/Cgi.hpp
+
