@@ -1,4 +1,5 @@
 #include "Cgi.hpp"
+#include <signal.h>
 
 void print_envp(char **envp)
 {
@@ -16,22 +17,30 @@ void Cgi::cgi_usage()
 {
     pid_t pid;
     int stat;
-    char **argv = new char *[2];
-    std::string tmp = "HOHOHOHO";
-    argv[0] = new char[100];
-    strcpy(argv[0], tmp.c_str());
-    //argv[0] = hoho.c_str();
-    argv[1] = NULL;
-    //print_envp(_env);
+    char **argv = new char *[3];
+    std::string tmp1 = "/Users/patutina/Desktop/Школа 21/new_boris_server/cgi_tester";
+    std::string tmp2 = "/Users/patutina/Desktop/Школа 21/new_boris_server/new_txt_file";
+//    std::string tmp1 = "cgi_tester";
+//    std::string tmp2 = "new_txt_file";
+
+    argv[0] = new char[1024];
+    argv[1] = new char[1024];
+    strcpy(argv[0], tmp1.c_str());
+    strcpy(argv[1], tmp2.c_str());
+    argv[2] = NULL;
+    print_envp(_env);
+    print_envp(argv);
     if ((pid = fork()) == 0)
     {
         std::cout << "Child process" << std:: endl;
-        int res = execve("/Users/patutina/Desktop/Школа 21/new_boris_server/cgi_tester", argv, _env);
+        int res = execve(argv[0], argv, _env);
         std::cout << res << std:: endl;
         std::cout << strerror(errno) << std:: endl;
         exit(1);
     }
-    waitpid(pid, &stat, 0);
+    //waitpid(pid, &stat, 0);
+    sleep(3);
+    kill(pid, stat);
     std::cout << "\n\nParent process" << std:: endl;
 };
 
@@ -54,30 +63,23 @@ void Cgi::map_envs_to_char_array()
 void Cgi::cgi_set_envs()
 {
 
-    //not clear
-    this->_map_envp["PATH_TRANSLATED"] = ""; //??? get_cwd()+path_info
-    this->_map_envp["SCRIPT_NAME"] = ""; // stuff before first ?
-
-    //clear
-    this->_map_envp["QUERY_STRING"] = ""; // stuff after first ? "q=query-string+http&oq=query-string+http&aqs=chrome..69i57j0i22i30l6j69i60.3737j0j9&sourceid=chrome&ie=UTF-8"
-    this->_map_envp["PATH_INFO"] = "/post_body"; // from request header 1 line, 2: GET /background.png HTTP/1.0
-    // или дополнительный путь после пути к скрипту, если задан путь c:/cgi-bin/example1.exe/sports.html, то /sports.html в path_info
-    this->_map_envp["REQUEST_URI"] = ""; // from request header 1 line, 2: GET /background.png HTTP/1.0 мб, что-то еще?
-    this->_map_envp["REQUEST_METHOD"] = "PUT"; // указываем метод from request
-    this->_map_envp["CONTENT_LENGTH"] = "10000"; // body length from request
+    this->_map_envp["AUTH_TYPE"] = "";
+    this->_map_envp["CONTENT_LENGTH"] = "0"; // body length from request
     this->_map_envp["CONTENT_TYPE"] = "text/html"; // from request
-    this->_map_envp["SERVER_NAME"] = ""; //from request ex: "HOST : localhost:8000"
-    this->_map_envp["SERVER_PORT"] = ""; //from request ex: "HOST : localhost:8000"
-    //if do not have authorisation
-    this->_map_envp["AUTH_TYPE"] = "Basic"; //type of authorisation; если есть авторизация, указываем ее тип: Authorization: <type> <credentials>
-    this->_map_envp["REMOTE_USER"] = ""; //если есть авторизация, указываем декодированного юзера (Base64::decode(credentials))
-
-    // no change
-    this->_map_envp["SERVER_PROTOCOL"] = "HTTP/1.1";
-    this->_map_envp["SERVER_SOFTWARE"] = "HTTP/1.1";
     this->_map_envp["GATEWAY_INTERFACE"] = "CGI/1.1"; //no change
+    this->_map_envp["PATH_INFO"] = "/post_body"; // from request header 1 line, 2: GET /background.png HTTP/1.0
+    this->_map_envp["PATH_TRANSLATED"] = "/Users/patutina/Desktop/Школа 21/new_boris_server/post_body"; //??? get_cwd()+path_info
+    this->_map_envp["QUERY_STRING"] = ""; // stuff after first ? "q=query-string+http&oq=query-string+http&aqs=chrome..69i57j0i22i30l6j69i60.3737j0j9&sourceid=chrome&ie=UTF-8"
     this->_map_envp["REMOTE_ADDR"] = "localhost"; //no change???
     this->_map_envp["REMOTE_IDENT"] = ""; //no change
+    this->_map_envp["REMOTE_USER"] = ""; //если есть авторизация, указываем декодированного юзера (Base64::decode(credentials))
+    this->_map_envp["SCRIPT_NAME"] = "/Users/patutina/Desktop/Школа 21/new_boris_server/cgi_tester"; // stuff before first ?
+    this->_map_envp["REQUEST_METHOD"] = "POST"; // указываем метод from request
+    this->_map_envp["REQUEST_URI"] = "/post_body"; // from request header 1 line, 2: GET /background.png HTTP/1.0 мб, что-то еще?
+    this->_map_envp["SERVER_NAME"] = "localhost"; //from request ex: "HOST : localhost:8000"
+    this->_map_envp["SERVER_PORT"] = "7554"; //from request ex: "HOST : localhost:8000"
+    this->_map_envp["SERVER_PROTOCOL"] = "HTTP/1.1";
+    this->_map_envp["SERVER_SOFTWARE"] = "HTTP/1.1";
 };
 
 void Cgi::cgi_start()

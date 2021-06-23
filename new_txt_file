@@ -1,0 +1,5 @@
+If you’ve got a question about one behavior, you should compare your
+program behavior with Nginx. For example, check how server_name
+works... We’ve shared with you a small tester it’s not mandatory to
+pass it if everything works fine with your browser and tests but it
+can help you hunt some bugs.
