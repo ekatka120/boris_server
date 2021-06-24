@@ -3,7 +3,7 @@
 
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.o
  ../includes/Cgi.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/Cgi.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.o
  ../includes/Cgi.hpp
  ../includes/Cluster.hpp
@@ -13,7 +13,7 @@ CMakeFiles/server_cpp.dir/src/Cluster.cpp.o
  ../includes/Response.hpp
  ../includes/Server.hpp
  ../includes/ServerConfig.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/Cluster.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/Cluster.cpp
 CMakeFiles/server_cpp.dir/src/Connection.cpp.o
  ../includes/Cgi.hpp
  ../includes/Connection.hpp
@@ -21,11 +21,11 @@ CMakeFiles/server_cpp.dir/src/Connection.cpp.o
  ../includes/RequestHandler.hpp
  ../includes/Response.hpp
  ../includes/Server.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/Connection.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/Connection.cpp
 CMakeFiles/server_cpp.dir/src/Parser.cpp.o
  ../includes/Parser.hpp
  ../includes/ServerConfig.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/Parser.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/Parser.cpp
 CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o
  ../includes/Cgi.hpp
  ../includes/Connection.hpp
@@ -33,7 +33,7 @@ CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o
  ../includes/RequestHandler.hpp
  ../includes/Response.hpp
  ../includes/Server.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/RequestHandler.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/RequestHandler.cpp
 CMakeFiles/server_cpp.dir/src/Response.cpp.o
  ../includes/Cgi.hpp
  ../includes/Connection.hpp
@@ -41,7 +41,7 @@ CMakeFiles/server_cpp.dir/src/Response.cpp.o
  ../includes/RequestHandler.hpp
  ../includes/Response.hpp
  ../includes/Server.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/Response.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/Response.cpp
 CMakeFiles/server_cpp.dir/src/Server.cpp.o
  ../includes/Cgi.hpp
  ../includes/Connection.hpp
@@ -49,10 +49,10 @@ CMakeFiles/server_cpp.dir/src/Server.cpp.o
  ../includes/RequestHandler.hpp
  ../includes/Response.hpp
  ../includes/Server.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/Server.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/Server.cpp
 CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o
  ../includes/ServerConfig.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/ServerConfig.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/ServerConfig.cpp
 CMakeFiles/server_cpp.dir/src/main.cpp.o
  ../includes/Cgi.hpp
  ../includes/Cluster.hpp
@@ -63,4 +63,4 @@ CMakeFiles/server_cpp.dir/src/main.cpp.o
  ../includes/Response.hpp
  ../includes/Server.hpp
  ../includes/ServerConfig.hpp
- /Users/patutina/Desktop/Школа 21/new_boris_server/src/main.cpp
+ /Users/patutina/Desktop/42/new_boris_server/src/main.cpp

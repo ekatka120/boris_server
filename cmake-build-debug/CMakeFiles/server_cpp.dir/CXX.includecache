@@ -16,9 +16,17 @@ map
 unistd.h
 -
 
-/Users/patutina/Desktop/Школа 21/new_boris_server/src/Cgi.cpp
+/Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp
 Cgi.hpp
-/Users/patutina/Desktop/Школа 21/new_boris_server/src/Cgi.hpp
+/Users/patutina/Desktop/42/new_boris_server/src/Cgi.hpp
 signal.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+vector
 -
 
