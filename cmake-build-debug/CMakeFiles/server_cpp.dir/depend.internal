@@ -3,6 +3,7 @@
 
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.o
  ../includes/Cgi.hpp
+ ../includes/Exceptions.hpp
  /Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.o
  ../includes/Cgi.hpp
