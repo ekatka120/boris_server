@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Cgi.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Cluster.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Cluster.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Connection.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Connection.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Parser.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Parser.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/RequestHandler.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Response.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Response.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Server.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Server.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/ServerConfig.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/main.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/main.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Cgi.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Cgi.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Cluster.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Cluster.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Connection.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Connection.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Parser.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Parser.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/RequestHandler.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Response.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Response.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Server.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/Server.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/ServerConfig.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/main.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

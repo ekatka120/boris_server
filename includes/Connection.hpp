@@ -49,6 +49,8 @@ public:
 
 public:
     void    PostRequestHandler(char *tmp);
+    void    DeleteRequestHandler(char *buf);
+    void    PutRequestHandler(char *buf);
 private:
     bool		if_file_exists(std::string file_name);
     std::string get_cwd_string();

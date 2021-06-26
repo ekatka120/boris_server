@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/patutina/Desktop/42/new_boris_server/src/Cluster.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/Cluster.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Parser.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/Parser.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/Server.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/Server.cpp.o"
-  "/Users/patutina/Desktop/42/new_boris_server/src/ServerConfig.cpp" "/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/ServerConfig.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Cluster.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/Cluster.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Parser.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/Parser.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/Server.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/Server.cpp.o"
+  "/Users/kata/Desktop/42/boris_server/src/ServerConfig.cpp" "/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_test.dir/src/ServerConfig.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

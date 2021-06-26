@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /Users/kata/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /Users/kata/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/patutina/Desktop/42/new_boris_server
+CMAKE_SOURCE_DIR = /Users/kata/Desktop/42/boris_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/patutina/Desktop/42/new_boris_server/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/kata/Desktop/42/boris_server/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server_cpp.dir/depend.make
@@ -78,120 +78,120 @@ include CMakeFiles/server_cpp.dir/flags.make
 
 CMakeFiles/server_cpp.dir/src/main.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_cpp.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/main.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_cpp.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/main.cpp.o -c /Users/kata/Desktop/42/boris_server/src/main.cpp
 
 CMakeFiles/server_cpp.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/main.cpp > CMakeFiles/server_cpp.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/main.cpp > CMakeFiles/server_cpp.dir/src/main.cpp.i
 
 CMakeFiles/server_cpp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/main.cpp -o CMakeFiles/server_cpp.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/main.cpp -o CMakeFiles/server_cpp.dir/src/main.cpp.s
 
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.o: ../src/Cluster.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server_cpp.dir/src/Cluster.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Cluster.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/Cluster.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server_cpp.dir/src/Cluster.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Cluster.cpp.o -c /Users/kata/Desktop/42/boris_server/src/Cluster.cpp
 
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/Cluster.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/Cluster.cpp > CMakeFiles/server_cpp.dir/src/Cluster.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/Cluster.cpp > CMakeFiles/server_cpp.dir/src/Cluster.cpp.i
 
 CMakeFiles/server_cpp.dir/src/Cluster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/Cluster.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/Cluster.cpp -o CMakeFiles/server_cpp.dir/src/Cluster.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/Cluster.cpp -o CMakeFiles/server_cpp.dir/src/Cluster.cpp.s
 
 CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o: ../src/ServerConfig.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/ServerConfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.o -c /Users/kata/Desktop/42/boris_server/src/ServerConfig.cpp
 
 CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/ServerConfig.cpp > CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/ServerConfig.cpp > CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.i
 
 CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/ServerConfig.cpp -o CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/ServerConfig.cpp -o CMakeFiles/server_cpp.dir/src/ServerConfig.cpp.s
 
 CMakeFiles/server_cpp.dir/src/Server.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/Server.cpp.o: ../src/Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server_cpp.dir/src/Server.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Server.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server_cpp.dir/src/Server.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Server.cpp.o -c /Users/kata/Desktop/42/boris_server/src/Server.cpp
 
 CMakeFiles/server_cpp.dir/src/Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/Server.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/Server.cpp > CMakeFiles/server_cpp.dir/src/Server.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/Server.cpp > CMakeFiles/server_cpp.dir/src/Server.cpp.i
 
 CMakeFiles/server_cpp.dir/src/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/Server.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/Server.cpp -o CMakeFiles/server_cpp.dir/src/Server.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/Server.cpp -o CMakeFiles/server_cpp.dir/src/Server.cpp.s
 
 CMakeFiles/server_cpp.dir/src/Parser.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/Parser.cpp.o: ../src/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server_cpp.dir/src/Parser.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Parser.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server_cpp.dir/src/Parser.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Parser.cpp.o -c /Users/kata/Desktop/42/boris_server/src/Parser.cpp
 
 CMakeFiles/server_cpp.dir/src/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/Parser.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/Parser.cpp > CMakeFiles/server_cpp.dir/src/Parser.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/Parser.cpp > CMakeFiles/server_cpp.dir/src/Parser.cpp.i
 
 CMakeFiles/server_cpp.dir/src/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/Parser.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/Parser.cpp -o CMakeFiles/server_cpp.dir/src/Parser.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/Parser.cpp -o CMakeFiles/server_cpp.dir/src/Parser.cpp.s
 
 CMakeFiles/server_cpp.dir/src/Connection.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/Connection.cpp.o: ../src/Connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server_cpp.dir/src/Connection.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Connection.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/Connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server_cpp.dir/src/Connection.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Connection.cpp.o -c /Users/kata/Desktop/42/boris_server/src/Connection.cpp
 
 CMakeFiles/server_cpp.dir/src/Connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/Connection.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/Connection.cpp > CMakeFiles/server_cpp.dir/src/Connection.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/Connection.cpp > CMakeFiles/server_cpp.dir/src/Connection.cpp.i
 
 CMakeFiles/server_cpp.dir/src/Connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/Connection.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/Connection.cpp -o CMakeFiles/server_cpp.dir/src/Connection.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/Connection.cpp -o CMakeFiles/server_cpp.dir/src/Connection.cpp.s
 
 CMakeFiles/server_cpp.dir/src/Response.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/Response.cpp.o: ../src/Response.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server_cpp.dir/src/Response.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Response.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/Response.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server_cpp.dir/src/Response.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Response.cpp.o -c /Users/kata/Desktop/42/boris_server/src/Response.cpp
 
 CMakeFiles/server_cpp.dir/src/Response.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/Response.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/Response.cpp > CMakeFiles/server_cpp.dir/src/Response.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/Response.cpp > CMakeFiles/server_cpp.dir/src/Response.cpp.i
 
 CMakeFiles/server_cpp.dir/src/Response.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/Response.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/Response.cpp -o CMakeFiles/server_cpp.dir/src/Response.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/Response.cpp -o CMakeFiles/server_cpp.dir/src/Response.cpp.s
 
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.o: ../src/Cgi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server_cpp.dir/src/Cgi.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Cgi.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server_cpp.dir/src/Cgi.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/Cgi.cpp.o -c /Users/kata/Desktop/42/boris_server/src/Cgi.cpp
 
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/Cgi.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp > CMakeFiles/server_cpp.dir/src/Cgi.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/Cgi.cpp > CMakeFiles/server_cpp.dir/src/Cgi.cpp.i
 
 CMakeFiles/server_cpp.dir/src/Cgi.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/Cgi.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/Cgi.cpp -o CMakeFiles/server_cpp.dir/src/Cgi.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/Cgi.cpp -o CMakeFiles/server_cpp.dir/src/Cgi.cpp.s
 
 CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o: CMakeFiles/server_cpp.dir/flags.make
 CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o: ../src/RequestHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o -c /Users/patutina/Desktop/42/new_boris_server/src/RequestHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o -c /Users/kata/Desktop/42/boris_server/src/RequestHandler.cpp
 
 CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/patutina/Desktop/42/new_boris_server/src/RequestHandler.cpp > CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kata/Desktop/42/boris_server/src/RequestHandler.cpp > CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.i
 
 CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/patutina/Desktop/42/new_boris_server/src/RequestHandler.cpp -o CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kata/Desktop/42/boris_server/src/RequestHandler.cpp -o CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.s
 
 # Object files for target server_cpp
 server_cpp_OBJECTS = \
@@ -219,7 +219,7 @@ server_cpp: CMakeFiles/server_cpp.dir/src/Cgi.cpp.o
 server_cpp: CMakeFiles/server_cpp.dir/src/RequestHandler.cpp.o
 server_cpp: CMakeFiles/server_cpp.dir/build.make
 server_cpp: CMakeFiles/server_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable server_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable server_cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -232,6 +232,6 @@ CMakeFiles/server_cpp.dir/clean:
 .PHONY : CMakeFiles/server_cpp.dir/clean
 
 CMakeFiles/server_cpp.dir/depend:
-	cd /Users/patutina/Desktop/42/new_boris_server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/patutina/Desktop/42/new_boris_server /Users/patutina/Desktop/42/new_boris_server /Users/patutina/Desktop/42/new_boris_server/cmake-build-debug /Users/patutina/Desktop/42/new_boris_server/cmake-build-debug /Users/patutina/Desktop/42/new_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kata/Desktop/42/boris_server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kata/Desktop/42/boris_server /Users/kata/Desktop/42/boris_server /Users/kata/Desktop/42/boris_server/cmake-build-debug /Users/kata/Desktop/42/boris_server/cmake-build-debug /Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server_cpp.dir/depend
 

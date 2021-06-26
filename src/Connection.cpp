@@ -61,12 +61,10 @@ bool		Connection::if_file_exists(std::string file_name)
 
     std::cout << file_name <<std::endl;
     if (stat(file_name.c_str(), &buf) != -1){
-        std::cout << "return(true);" <<std::endl;
         return(true);
     }
     else
     {
-        std::cout << "return(false);" <<std::endl;
         return(false);
     }
 }
@@ -126,6 +124,56 @@ void        Connection::PostRequestHandler(char *buf)
     }
 }
 
+void        Connection::DeleteRequestHandler(char *buf)
+{
+    std::string path = "/Users/kata/Desktop/42/";
+    std::string filename = "exxx";
+    std::string status_message;
+    std::string body;
+    int         status_code;
+    int         res;
+
+    filename = path+filename;
+    if (if_file_exists(filename))
+    {
+        std::ifstream file(filename);
+
+        if (file.good())
+        {
+            file >> body;
+            if ((res = remove(filename.c_str())) == 0) {
+                if (body.empty() == true)
+                {
+                    status_code = 204;
+                    status_message = "No content";
+                }
+                else {
+                    status_code = 200;
+                    status_message = "Ok";
+                }
+            } else {
+                status_code = 202;
+                status_message = "Accepted";
+            }
+        }
+        else
+        {
+            status_code = 403;
+            status_message = "Forbidden";
+        }
+    }
+    else{
+        status_code = 404;
+        status_message = "Not Found";
+    }
+    std::cout << "Status code " << status_code << " " << status_message << std::endl;
+    if (status_code == 200)
+        std::cout << "Body:\n" << body << std::endl;
+}
+void        Connection::PutRequestHandler(char *buf)
+{
+
+}
 
 void		Connection::readFromSocket() {
 	int readValue;
@@ -138,7 +186,6 @@ void		Connection::readFromSocket() {
 		if (_requestHandler->checkNewPartOfRequest(buf)){
 			_status = WRITE;
 		}
-		//std::cout << _requestHandler->getRawRequest() << std::endl;//
 	} else {
 		close(_socketFd);
 		_status = CLOSE;
@@ -148,6 +195,16 @@ void		Connection::readFromSocket() {
     {
         std::cout << "It's a Post request" << std::endl;
         PostRequestHandler(buf);
+    }
+    else if (buf[0] == 'D' & buf[1] == 'E' & buf[2] == 'L' & buf[3] == 'E')
+    {
+        std::cout << "It's a Delete request" << std::endl;
+        DeleteRequestHandler(buf);
+    }
+    else if (buf[0] == 'P' & buf[1] == 'U' & buf[2] == 'T')
+    {
+        std::cout << "It's a Put request" << std::endl;
+        PutRequestHandler(buf);
     }
 }
 
