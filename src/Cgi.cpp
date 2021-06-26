@@ -35,7 +35,7 @@ void Cgi::cgi_usage_2(char **filename)
 {
     int         fd;
     pid_t       pid;
-    int         stat;
+    int         stat = 0;
     int         input;
     int         output;
     char        **argv;
@@ -74,6 +74,7 @@ void Cgi::cgi_usage_2(char **filename)
         answer_body = read_from_file(fd);
         unlink(filename[0]);
         unlink(filename[1]);
+        std::cout << "201 Ok" << std::endl;
         std::cout << answer_body;
     }
 };

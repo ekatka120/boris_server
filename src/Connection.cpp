@@ -99,9 +99,11 @@ void        Connection::PostRequestHandler(char *buf)
             if (file.is_open())
             {
                 file << "content xxxx";//body
-                std::cout << "HTTP/1.1 204 No Content..." << std::endl;
+                std::cout << "HTTP/1.1 204 No Content..." << std::endl;//или тут 200?
                 file.close();
             }
+            else
+                std::cout << "HTTP/1.1 403 Forbidden" << std::endl;
         }
         else
         {
@@ -172,7 +174,35 @@ void        Connection::DeleteRequestHandler(char *buf)
 }
 void        Connection::PutRequestHandler(char *buf)
 {
+    //в реализации PUT почти не отличается от POST
+    std::string location_request = "/post_body";
 
+    std::string filename = "/Users/patutina/Desktop/Школа 21/new_boris_server/" + location_request;
+    if (if_file_exists(filename) == true)
+    {
+        std::cout << "PUT" << std::endl;
+        std::ofstream file(filename, std::ios::out | std::ios::in | std::ios::trunc);
+        if (file.is_open())
+        {
+            file << "content xxxx";//body
+            std::cout << "HTTP/1.1 204 No Content..." << std::endl;//или тут 200?
+            file.close();
+        }
+    }
+    else
+    {
+        std::cout << "PUT, file does not exist" << std::endl;
+        std::ofstream file(filename, std::ios::out | std::ios::in | std::ios::trunc);
+        if (file.is_open())
+        {
+            file << "content xxxx";
+            std::cout << "HTTP/1.1 201 Created..." << std::endl;
+            std::cout << "content xxxx" << std::endl;
+            file.close();
+        }
+        else
+            std::cout << "HTTP/1.1 403 Frobidden" << std::endl;
+    }
 }
 
 void		Connection::readFromSocket() {
