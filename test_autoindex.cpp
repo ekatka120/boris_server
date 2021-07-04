@@ -106,6 +106,8 @@ int main(void)
     std::string directory;
     std::string path;
     std::list<char *> files;
+    std::list<char *> times;
+    std::list<char *> sizes;
 
     current_dir = get_cwd_string();
     if (current_dir.back() != '/')
@@ -120,35 +122,40 @@ int main(void)
     d = opendir(path.c_str());
     t_time my_time;
     char **array;
+    std::string time;
     if (d)
     {
         while ((dir = readdir(d)) != NULL) {
-            printf("%s\n", dir->d_name);
-            std::cout << "Filename\t" << dir->d_name << "\n";
             stat(dir->d_name, &filestat);
-            
-            // std::cout << "Birth time\t" << ctime(&filestat.st_birthtime);
-            // std::cout << "User time\t" << ctime(&filestat.st_ctime);
-            std::cout << "here\n";
             array = ft_split(ctime(&filestat.st_ctime), ' ');
             my_time.weekday = array[0];
             my_time.month = array[1];
             my_time.day = array[2];
-
-            my_time.year = array[4];
             char no_seconds[10];
+            char year[10];
             strcpy(no_seconds, array[3]);
+            strcpy(year, array[4]);
             no_seconds[5] = '\0';
+            year[4] = '\0';
             my_time.time_no_seconds = no_seconds;
-            std::cout << my_time.day << "\t" << my_time.month << "\t" << my_time.time_no_seconds << "\n";
-            // strcpy(my_time.weekday, array[0]);
-            // std::cout << "here\n";
-            // strcpy(my_time.month, array[1]);
-            // strcpy(my_time.day, array[2]);
-            // strcpy(my_time.time_no_seconds, array[3]);
-            // my_time.time_no_seconds[5] = '\0';
-            // strcpy(my_time.year, array[4]);
+            my_time.year = year;
+            time = my_time.day;
+            time = time + "-";
+            time = time + my_time.month;
+            time = time + "-";
+            time = time + my_time.year;
+            time = time + " ";
+            time = time + my_time.time_no_seconds; 
+            //std::cout << my_time.day << "\t" << my_time.month << "\t" << my_time.time_no_seconds << "\n";
+            char res[100];
+            char num_char[100];
+            strcpy(res, time.c_str());
+            std::string tmp = std::to_string(filestat.st_size);
+            strcpy(num_char, tmp.c_str());
+            sizes.push_back(num_char);
+            times.push_back(res);
             files.push_back(dir->d_name);
+            std::cout << dir->d_name << "\t\t" << res << "\t\t" << num_char << std::endl;
         }
         closedir(d);
         //if closedir() == -1, throw Exception
@@ -164,7 +171,16 @@ int main(void)
     //            + "<body bgcolor=\"white\">\n"
     //            + "<h1>Index of /test/</h1><hr><pre>";
 
-
+    // std::list<char *>::iterator it_times = times.begin();
+    // std::list<char *>::iterator it_sizes = sizes.begin();
+    // for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
+    // {
+    //     std::cout << "\t" << *it;
+    //     std::cout << "\t\t" << *it_times;
+    //     std::cout << "\t\t" << *it_sizes << std::endl;
+    //     it_times++;
+    //     it_sizes++;
+    // }
 
     // for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
     // {
