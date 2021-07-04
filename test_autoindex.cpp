@@ -106,9 +106,9 @@ int my(void)
     std::string current_dir;
     std::string directory;
     std::string path;
-    std::list<char *> files;
-    std::list<char *> times;
-    std::list<char *> sizes;
+    std::list<std::string> files;
+    std::list<std::string> times;
+    std::list<std::string> sizes;
 
     current_dir = get_cwd_string();
     if (current_dir.back() != '/')
@@ -142,9 +142,8 @@ int my(void)
         {
             tmp = path + dir->d_name;
             strcpy(file_path, tmp.c_str());
-            //проверка на то, является ли что-то папкой или файлом
-            //к папкам добовляем в конец / и убираем у них размер
             stat(file_path, &filestat);
+            //free(file_path);
             name = dir->d_name;
             if (filestat.st_mode == 16877 & dir->d_name[0] != '.')
                 name = name + "/";
@@ -152,6 +151,7 @@ int my(void)
             array = ft_split(ctime(&filestat.st_mtime), ' ');
             strcpy(no_seconds, array[3]);
             strcpy(year, array[4]);
+            
             no_seconds[5] = '\0';
             year[4] = '\0';
             my_time.weekday = array[0];
@@ -161,6 +161,8 @@ int my(void)
             my_time.year = year;
 
             time = my_time.day;
+            if (my_time.day[1] == '\0')
+                time = "0" + time;
             time = time + "-";
             time = time + my_time.month;
             time = time + "-";
@@ -168,32 +170,34 @@ int my(void)
             time = time + " ";
             time = time + my_time.time_no_seconds; 
 
-            char time_char[100];
-            char size_char[100];
-            char name_char[100];
-            strcpy(time_char, time.c_str());
             if (filestat.st_mode == 16877)
                 tmp = "-";
             else
                 tmp = std::to_string(filestat.st_size);
-            strcpy(size_char, tmp.c_str());
-            strcpy(name_char, name.c_str());
-            sizes.push_back(strdup(size_char));
-            times.push_back(strdup(time_char));
-            files.push_back(strdup(name_char));
-            std::cout << "here " << name_char << "\t" << time_char << "\t" << size_char << std::endl;
+            sizes.push_back(tmp);
+            times.push_back(time);
+            files.push_back(name);
+            for (int i = 0; array[i] != NULL;)
+                free(array[i++]);
+            free(array);
         }
         closedir(d);
         //if closedir() == -1, throw Exception
     
 
-        std::list<char *>::iterator it_times = times.begin();
-        std::list<char *>::iterator it_sizes = sizes.begin();
-        for (std::list<char *>::iterator it = files.begin(); it != files.end(); )
+        std::list<std::string>::iterator it_times = times.begin();
+        std::list<std::string>::iterator it_sizes = sizes.begin();
+        for (std::list<std::string>::iterator it = files.begin(); it != files.end(); )
         {
-            std::cout << "\t" << *it++;
-            std::cout << "\t\t" << *it_times++;
-            std::cout << "\t\t" << *it_sizes++ << std::endl;
+            std::cout << *it;
+            int space = (*it).size();
+            for (int space = (*it).size(); space!= 70; space++)
+                std::cout << " ";
+            std::cout << *it_times++;
+            for (space = 0; space!= 70 - (*it_sizes).size(); space++)
+                std::cout << " ";
+            std::cout << *it_sizes++ << std::endl;
+            it++;
         }
     }
     //     for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
@@ -218,5 +222,4 @@ int my(void)
 int main(void)
 {
     my();
-    sleep(100);
 }
