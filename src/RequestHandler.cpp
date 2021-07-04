@@ -87,16 +87,17 @@ int					RequestHandler::parseRequest(){
 void	RequestHandler::autoindex_execution()
 {
     std::string current_dir;
-    std::string directory;
+    std::string location;
     std::string path;
     std::list<char *> files;
 
     current_dir = get_cwd_string();
-	current_dir = "/Users/patutina/Desktop/42/my_boris_server/";
+	//current_dir = "/Users/patutina/Desktop/42/my_boris_server/";
+    current_dir = "/Users/dskittri/Desktop/my_boris_server";
     if (current_dir.back() != '/')
         current_dir = current_dir + "/";
-    directory = "www/";
-    path = current_dir + directory;
+    location = "www/";
+    path = current_dir + location;
     std::cout << path;
     //___________________
     DIR *d;
@@ -118,9 +119,9 @@ void	RequestHandler::autoindex_execution()
 
     response = "";
     response = response + "<html>\n"
-                          + "<head><title>Index of /</title></head>\n"
+                          + "<head><title>Index of " + location + "</title></head>\n"
                           + "<body bgcolor=\"white\">\n"
-                          + "<h1>Index of /test/</h1><hr><pre>";
+                          + "<h1>Index of " + location + "</h1><hr><pre>";
 	for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
 	{
 		line = "<a href=\"";
