@@ -99,4 +99,20 @@ Exceptions.hpp
 /Users/dskittri/Desktop/my_boris_server/src/RequestHandler.cpp
 RequestHandler.hpp
 /Users/dskittri/Desktop/my_boris_server/src/RequestHandler.hpp
+sys/types.h
+-
+sys/stat.h
+-
+time.h
+-
+dirent.h
+-
+stdio.h
+-
+iostream
+-
+unistd.h
+-
+list
+-
 
