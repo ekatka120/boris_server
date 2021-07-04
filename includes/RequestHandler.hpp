@@ -3,6 +3,11 @@
 # include <iostream>
 # include <fstream>
 # include <map>
+# include <list>
+#include <sys/types.h>
+#include <dirent.h>
+#include <stdio.h>
+#include <unistd.h>
 # include "Server.hpp"
 # include "Response.hpp"
 # define GET 1
@@ -40,7 +45,7 @@ public:
 	void				setRawRequest(const std::string &rawRequest);
 	const std::string& 	getAnswer() const;
 	unsigned long		getBytesToSend() const;
-
+	void				autoindex_execution();
 	int					checkNewPartOfRequest(char *partOfRequest);
 	int					parseRequest();//парсинг запроса на готовность к обработке(наличие \n\r\n\r) + заполнние полей
 	void				prepareResponse();

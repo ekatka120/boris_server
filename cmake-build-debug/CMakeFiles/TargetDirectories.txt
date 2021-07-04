@@ -1,4 +1,4 @@
-/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_test.dir
-/Users/kata/Desktop/42/boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir
+/Users/patutina/Desktop/42/my_boris_server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/patutina/Desktop/42/my_boris_server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/patutina/Desktop/42/my_boris_server/cmake-build-debug/CMakeFiles/server_test.dir
+/Users/patutina/Desktop/42/my_boris_server/cmake-build-debug/CMakeFiles/server_cpp.dir

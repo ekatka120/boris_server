@@ -223,8 +223,10 @@ void		Connection::readFromSocket() {
 	std::cout << "read return : " << readValue << " BUFF = " << BUFFER_SIZE << std::endl;
     if (buf[0] == 'P' & buf[1] == 'O' & buf[2] == 'S' & buf[3] == 'T')
     {
-        std::cout << "It's a Post request" << std::endl;
-        PostRequestHandler(buf);
+        // std::cout << "It's a Post request" << std::endl;
+        // PostRequestHandler(buf);
+        // std::cout << "It's a Post request" << std::endl;
+        // PostRequestHandler(buf);
     }
     else if (buf[0] == 'D' & buf[1] == 'E' & buf[2] == 'L' & buf[3] == 'E')
     {
