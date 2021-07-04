@@ -90,6 +90,8 @@ typedef struct t_time
     char    *year;
 } t_time;
 
+void foo(){}
+
 std::string		get_cwd_string()
 {
     char dir[1024];
@@ -99,9 +101,8 @@ std::string		get_cwd_string()
     return cwd;
 }
 
-int main(void)
+int my(void)
 {
-    //function get_path
     std::string current_dir;
     std::string directory;
     std::string path;
@@ -114,31 +115,51 @@ int main(void)
         current_dir = current_dir + "/";
     directory = "www/";
     path = current_dir + directory;
-    std::cout << "PATH " << path << std::endl;
-    //___________________
+    std::cout << "current location: " << path << std::endl;
+
+
     DIR *d;
-    struct dirent *dir;
-        struct stat filestat;
-    d = opendir(path.c_str());
-    t_time my_time;
+    struct dirent   *dir;
+    struct stat     filestat;
+    char no_seconds[10];
+    char year[10];
+    std::string tmp;
+    t_time   my_time;
     char **array;
     std::string time;
+    std::string name;
+    char file_path[1024];
+
+
+    d = opendir(path.c_str());
+    files.clear();
+    sizes.clear();
+    times.clear();
     if (d)
     {
-        while ((dir = readdir(d)) != NULL) {
-            stat(dir->d_name, &filestat);
-            array = ft_split(ctime(&filestat.st_ctime), ' ');
-            my_time.weekday = array[0];
-            my_time.month = array[1];
-            my_time.day = array[2];
-            char no_seconds[10];
-            char year[10];
+        dir = readdir(d);
+        while ((dir = readdir(d)) != NULL) 
+        {
+            tmp = path + dir->d_name;
+            strcpy(file_path, tmp.c_str());
+            //проверка на то, является ли что-то папкой или файлом
+            //к папкам добовляем в конец / и убираем у них размер
+            stat(file_path, &filestat);
+            name = dir->d_name;
+            if (filestat.st_mode == 16877 & dir->d_name[0] != '.')
+                name = name + "/";
+            //Спросить у Бориса, как это сделать нормально
+            array = ft_split(ctime(&filestat.st_mtime), ' ');
             strcpy(no_seconds, array[3]);
             strcpy(year, array[4]);
             no_seconds[5] = '\0';
             year[4] = '\0';
+            my_time.weekday = array[0];
+            my_time.month = array[1];
+            my_time.day = array[2];
             my_time.time_no_seconds = no_seconds;
             my_time.year = year;
+
             time = my_time.day;
             time = time + "-";
             time = time + my_time.month;
@@ -146,67 +167,56 @@ int main(void)
             time = time + my_time.year;
             time = time + " ";
             time = time + my_time.time_no_seconds; 
-            //std::cout << my_time.day << "\t" << my_time.month << "\t" << my_time.time_no_seconds << "\n";
-            char res[100];
-            char num_char[100];
-            strcpy(res, time.c_str());
-            std::string tmp = std::to_string(filestat.st_size);
-            strcpy(num_char, tmp.c_str());
-            sizes.push_back(num_char);
-            times.push_back(res);
-            files.push_back(dir->d_name);
-            std::cout << dir->d_name << "\t\t" << res << "\t\t" << num_char << std::endl;
+
+            char time_char[100];
+            char size_char[100];
+            char name_char[100];
+            strcpy(time_char, time.c_str());
+            if (filestat.st_mode == 16877)
+                tmp = "-";
+            else
+                tmp = std::to_string(filestat.st_size);
+            strcpy(size_char, tmp.c_str());
+            strcpy(name_char, name.c_str());
+            sizes.push_back(strdup(size_char));
+            times.push_back(strdup(time_char));
+            files.push_back(strdup(name_char));
+            std::cout << "here " << name_char << "\t" << time_char << "\t" << size_char << std::endl;
         }
         closedir(d);
         //if closedir() == -1, throw Exception
+    
+
+        std::list<char *>::iterator it_times = times.begin();
+        std::list<char *>::iterator it_sizes = sizes.begin();
+        for (std::list<char *>::iterator it = files.begin(); it != files.end(); )
+        {
+            std::cout << "\t" << *it++;
+            std::cout << "\t\t" << *it_times++;
+            std::cout << "\t\t" << *it_sizes++ << std::endl;
+        }
     }
-    //else Exception
+    //     for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
+    //     {
+    //         line = "<a href=\"";
+    //         line = line + *it;
+    //         line = line + "\">";
+    //         line = line + *it;
+    //         line = line + "</a>\n";
+    //         response = response + line;
+    //         std::cout << "Filename\t" << *it << "\n";
+    //         stat(*it, &filestat);
+            
+    //         std::cout << "Birth time\t" << ctime(&filestat.st_birthtime);
+    //         std::cout << "User time\t" << ctime(&filestat.st_ctime);
+    //     }
 
-    std::string response;
-    std::string line;
-
-    // response = "";
-    // response = response + "<html>\n"
-    //            + "<head><title>Index of /</title></head>\n"
-    //            + "<body bgcolor=\"white\">\n"
-    //            + "<h1>Index of /test/</h1><hr><pre>";
-
-    // std::list<char *>::iterator it_times = times.begin();
-    // std::list<char *>::iterator it_sizes = sizes.begin();
-    // for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
-    // {
-    //     std::cout << "\t" << *it;
-    //     std::cout << "\t\t" << *it_times;
-    //     std::cout << "\t\t" << *it_sizes << std::endl;
-    //     it_times++;
-    //     it_sizes++;
     // }
+    return(0);
+}
 
-    // for (std::list<char *>::iterator it = files.begin(); it != files.end(); it++)
-    // {
-    //     line = "<a href=\"";
-    //     line = line + *it;
-    //     line = line + "\">";
-    //     line = line + *it;
-    //     line = line + "</a>\n";
-    //     response = response + line;
-    //     std::cout << "Filename\t" << *it << "\n";
-    //     stat(*it, &filestat);
-        
-    //     std::cout << "Birth time\t" << ctime(&filestat.st_birthtime);
-    //     std::cout << "User time\t" << ctime(&filestat.st_ctime);
-    // }
-
-    //   + "<a href=\"../\">../</a>\n"
-    //   + "<a href=\"test.txt\">test.txt</a>                 19-May-2012 10:43            0\n"
-
-    response = response + "</pre><hr></body>\n"
-                          "</html>";
-    //std::cout << response << std::endl;
-
-    //check if dir exists (boris's part)
-    // 1) get names of all files
-    // 2) creating map, writing them there
-    // 3) writing as value address of file
-    // 4) saving everything in html code as response
+int main(void)
+{
+    my();
+    sleep(100);
 }
